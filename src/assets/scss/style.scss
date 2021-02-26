@@ -42,6 +42,7 @@
 @import "spinners";
 @import "utilities";
 @import "print";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 .brand-text-icon {
    letter-spacing: 1px;
@@ -55,9 +56,15 @@ header {
    border-bottom: 1px solid $gray-200;
    width: 100%;
    position: relative;
+   margin-bottom: 30px;
+
+   @media (min-width: 992px) {
+      margin-bottom: 50px;
+   }
 
    .navbar {
       height: 80px;
+      padding: 0;
 
       ul.navbar-nav {
          li.nav-item {

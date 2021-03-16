@@ -8,6 +8,20 @@ export default function Header(props) {
       return props.location.pathname === path ? " active" : "";
    };
 
+   if (props.isCentered) {
+      return (
+         <Fade>
+            <header className="spacing-sm">
+               <div className="container">
+                  <nav className="navbar navbar-expand-lg navbar-light">
+                     <BrandIcon className="mx-auto" />
+                  </nav>
+               </div>
+            </header>
+         </Fade>
+      );
+   }
+
    return (
       <Fade>
          <header className="spacing-sm">
@@ -15,14 +29,14 @@ export default function Header(props) {
                <nav className="navbar navbar-expand-lg navbar-light">
                   <BrandIcon />
                   <button
-                     class="navbar-toggler"
+                     className="navbar-toggler"
                      type="button"
                      data-toggle="collapse"
                      data-target="#navbarNavigation"
                      aria-controls="navbarNavigation"
                      aria-label="Toggle navigation"
                   >
-                     <span class="navbar-toggler-icon"></span>
+                     <span className="navbar-toggler-icon"></span>
                   </button>
                   <div
                      className="collapse navbar-collapse"
